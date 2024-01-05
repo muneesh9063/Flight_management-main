@@ -20,26 +20,27 @@ public class CustomerApi {
 
     @GetMapping
     public ResponseEntity<List<CustomerViewModel>> getAll() {
-
+        return ResponseEntity.ok(customerService.getAll());
     }
 
     @GetMapping("{id}")
     public ResponseEntity<CustomerViewModel> getById(@PathVariable int id) {
-
+        return ResponseEntity.ok(customerService.getById(id));
     }
 
     @PostMapping
     public ResponseEntity<CustomerViewModel> create(@RequestBody CustomerCreateViewModel viewModel) {
-
+        return ResponseEntity.ok(customerService.create(viewModel));
     }
 
     @PutMapping("{id}")
     public ResponseEntity<CustomerViewModel> update(@PathVariable int id, @RequestBody CustomerUpdateViewModel viewModel) {
-
+        return ResponseEntity.ok(customerService.update(id, viewModel));
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<?> deleteById(@PathVariable int id) {
-
+        customerService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
