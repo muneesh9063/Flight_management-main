@@ -1,14 +1,15 @@
-Flight Management System
+<h1>Flight Management System</h1>
 This project is a Spring Boot 3.x RESTful web microservice that implements the following business requirements for a flight management system:
 
 A flight as an entity has the following properties:
 
-Id
-Flight Code (alphanumeric/String e.g., AN458)
-Origin (city/String)
-Destination (city/String)
-Date and time of flight (LocalDateTime)
-Capacity (int)
+<ol>Id
+<li>Flight Code (alphanumeric/String e.g., AN458)</li>
+<li>Origin (city/String)</li>
+<li>Destination (city/String)</li>
+<li>Date and time of flight (LocalDateTime)</li>
+<li>Capacity (int)<li></li>
+</ol>
 A passenger as an entity has the following properties:
 
 Id
